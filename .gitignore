@@ -1,0 +1,6 @@
+
+gitignore-Folder
+dotenv
+node_modules
+command-handler/node_modules
+client_secret_googleDrive.json
