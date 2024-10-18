@@ -9,7 +9,7 @@ A Discord bot that integrates with your 3D printer's Klipper firmware through th
 - Notifies users when the print job is completed.
 - Displays temperature data for the extruder and bed.
 
-
+![botphoto](https://github.com/TM203/Klipper-3D-Printing-API-discord/blob/main/github-images/image.png)
 
   **3D Printer Status**
 - **State:** Printing
