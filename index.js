@@ -4,18 +4,26 @@ const WOK = require("wokcommands"); // command handler
 const path = require("path");
 require("dotenv/config");
 
+const { ymal } = require("./util/yaml-read")
+
+
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,           // guild features
         GatewayIntentBits.GuildMessages,    // handling messages
-        GatewayIntentBits.MessageContent    // content of messages
+        GatewayIntentBits.MessageContent,   // content of messages
+        GatewayIntentBits.GuildVoiceStates // voice state updates
     ]
 });
 
+const ymalConfig = ymal()
 
 
 
-client.once('ready', () => {
+
+client.once('ready', async() => {
+
+
     console.log(`Logged in as ${client.user.tag}!`);
 
     new WOK({
@@ -36,7 +44,7 @@ client.once('ready', () => {
 
         // What server IDs are for testing. This is where test
         // only commands are registered to
-        testServers: process.env.SERVERS,
+        testServers: ymalConfig.SERVERS,
         
         // Don't want some of the default commands? Add them here
         disabledDefaultCommands: [
@@ -75,6 +83,6 @@ client.once('ready', () => {
 
 
 // Log in to Discord with your bot's token
-client.login(process.env.DISCORDBOTKEY).catch(err => {
+client.login(ymalConfig.DISCORDBOTKEY).catch(err => {
     console.error('Failed to log in check your token is valid:', err);
 });

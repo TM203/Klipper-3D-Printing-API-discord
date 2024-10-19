@@ -1,0 +1,63 @@
+#  _______ __  __ ___   ___ ____  
+# |__   __|  \/  |__ \ / _ \___ \ 
+#    | |  | \  / |  ) | | | |__) |
+#    | |  | |\/| | / /| | | |__ < 
+#    | |  | |  | |/ /_| |_| |__) |
+#    |_|  |_|  |_|____|\___/____/ 
+                                 
+# Configuration for the 3D printer project.
+# DO NOT POST YOUR API KEY OR DISCORD API KEY ONLINE.
+
+
+# changes the bot image to a pre made one
+UpdateBotImage: false
+
+# Your klipper key - you can find this in /settings under Authentication. 
+KLIPPERAPIKEY: ''
+
+# Discord Bot Key - key to login to your discord bot.
+DISCORDBOTKEY: ''
+
+#Discord Bot id.
+BOTID: ''
+
+#Discord ChannelID to post updates to.
+PRINTER_CHANNEL_ID: ''
+
+#the notifications will be sent to the voice channel you're in. 
+#For example, when you join a voice channel, 
+#notifications will be pushed to that channel.
+#when you leave it will send it back in your PRINTER CHANNEL.
+VC_Follow_Feature: false
+VC_Follow_USERID: '309881118449205248'
+
+#The URL to the dash of klipper.
+KLIPPER_BASE_URL: 'http://unkown.com'
+
+# A list of servers that will be allowed.
+SERVERS:
+  - '721720332555689'
+
+
+#Notfications to discord channel.
+Notfications:
+  filamentrun_out_notfication: true
+  PrintStart_notfication: true
+  PrintComplete_notfication: true
+  PrintCancelled_notfication: true
+  PrintError_notfication: true
+
+
+
+
+#Get notfications on progress on your print.
+print_progress_notfications: true
+print_progress_intival: '1'
+
+#Enable webcam images.
+Webcam_Enabled: false
+#URL to the webcam stream.
+webcam_URL: '/webcam/?action=stream'
+
+
+

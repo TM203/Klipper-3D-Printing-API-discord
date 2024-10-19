@@ -1,10 +1,10 @@
 const axios = require('axios');
 const { EmbedBuilder } = require('discord.js');
-require('dotenv').config();
+const { ymal } = require("../util/yaml-read")
+const ymalConfig = ymal()
 
-
-const KLIPPER_API_KEY = process.env.KLIPPERAPIKEY;
-const KLIPPER_BASE_URL = process.env.KLIPPER_BASE_URL;
+const KLIPPER_API_KEY = ymalConfig.KLIPPERAPIKEY;
+const KLIPPER_BASE_URL = ymalConfig.KLIPPER_BASE_URL;
 
 // data from Klipper
 async function fetchKlipperJobData() {
@@ -14,6 +14,7 @@ async function fetchKlipperJobData() {
                 'X-Api-Key': KLIPPER_API_KEY, 
             },
         });
+        console.log(response.data)
    
 
 
