@@ -9,9 +9,6 @@
 # DO NOT POST YOUR API KEY OR DISCORD API KEY ONLINE.
 
 
-# changes the bot image to a pre made one
-UpdateBotImage: false
-
 # Your klipper key - you can find this in /settings under Authentication. 
 KLIPPERAPIKEY: ''
 
