@@ -4,21 +4,20 @@ A Discord bot that integrates with your 3D printer's Klipper firmware through th
 
 ## Features
 
+- Webcam images (optional)
+- Commands (optional)
 - Fetches and displays 3D printer status in Discord.
 - Sends an embed message when printing starts.
-- Notifies users when the print job is completed.
+- Notifies users when the print job is completed. (optional)
 - Displays temperature data for the extruder and bed.
+- Send Messages in the vc you are in. (optional)
+- print progress notfications (optional)
+- filamentrun out notfications (optional)
 
-![botphoto](https://github.com/TM203/Klipper-3D-Printing-API-discord/blob/main/github-images/image.png)
 
-  **3D Printer Status**
-- **State:** Printing
-- **Operational:** Yes
-- **Printing:** Yes
-- **Paused:** No
-- **Error:** No
-- **Bed Temperature:** Actual: **60°C** | Target: **60°C**
-- **Tool 0 Temperature:** Actual: **220°C** | Target: **220°C**
+![printStarted](https://github.com/TM203/Klipper-3D-Printing-API-discord/blob/main/github-images/printStarted.png)
+
+
 
 
 ## Prerequisites
@@ -27,6 +26,7 @@ A Discord bot that integrates with your 3D printer's Klipper firmware through th
 - Discord account and a bot created through the Discord Developer Portal.
 - Klipper firmware installed on your 3D printer with Moonraker API enabled.
 - A Discord channel to send updates.
+
 
 ## Installation
 
@@ -43,9 +43,8 @@ npm install
 
 
 **eg env file**
-change the env file 
+setup & change the config.ymal to your liking
 
-DISCORD_BOT_TOKEN=your_discord_bot_token
-KLIPPERAPIKEY=your_klipper_api_key
-KLIPPER_BASE_URL=http://klipperpi.local
-PRINTER_CHANNEL_ID=your_discord_channel_id
+
+![printprogress](https://github.com/TM203/Klipper-3D-Printing-API-discord/blob/main/github-images/printprogress.png)
+![printFailed](https://github.com/TM203/Klipper-3D-Printing-API-discord/blob/main/github-images/printFailed.png)
